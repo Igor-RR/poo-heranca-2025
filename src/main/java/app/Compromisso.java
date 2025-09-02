@@ -7,7 +7,7 @@ public class Compromisso extends Atividade {
     public void setDataInicial(String dataInicial){
         this.dataInicial = dataInicial;
     }
-    public String getDatainical(){
+    public String getDataInical(){
         return dataInicial;
     }
     public void setDataFinal(String dataFinal){
@@ -22,10 +22,10 @@ public class Compromisso extends Atividade {
         String dataInicial,
         String dataFinal){
 
-        this.setid(id);
+        this.setId(id);
         this.setDescricao(descricao);
         this.setDataFinal(dataFinal);
-        this.setDatainical(dataInicial);
+        this.setDataInicial(dataInicial);
  
     }
 
@@ -34,8 +34,8 @@ public class Compromisso extends Atividade {
         String descricao,
         String dataInicial){
 
-        this.setid(id);
+        this.setId(id);
         this.setDescricao(descricao);
-        this.setDatainical(dataInicial);
+        this.setDataInicial(dataInicial);
         }
 }
