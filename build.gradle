@@ -5,5 +5,4 @@ plugins {
 
 application {
     mainClass = 'app.Main'
-    mainClass = 'app.Cadastro'
 }

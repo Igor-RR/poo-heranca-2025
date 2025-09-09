@@ -1,17 +1,25 @@
 package app;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class Main{
     public static void main(String[] args){
-       Tarefa[] tarefas = new Tarefa[5]; 
+        PessoaFisica[] pf = new PessoaFisica[5];
 
-       tarefas[0] = new Tarefa(0,"Teste", false);
-       tarefas[4] = new Tarefa(4,"Novo Teste", false);
+        //public PessoaFisica(String nome, 
+        // String endereco, LocalDate dataNascimento, 
+        // String cpf)//
 
-       Compromisso[] compromissos = new Compromisso[5];
+        pf[0] =  new PessoaFisica("Marco", "Almira - SP",
+        LocalDate.of(1980, Month.MARCH, 29), "xxxx.xxxx");
+        
+        System.out.println(pf[0].exibirInformações());
 
-       compromissos[2] = new Compromisso(0,"Compromisso","Hoje","Amanhã");
+        // public PessoaJuridica(String nome,
+        // String endereco, String nomeFantasia, 
+        // String cnpj) //
 
-       System.out.println(tarefas[0].getDescricao());
-
+        PessoaJuridica pj = new PessoaJuridica("Alex", )
     }
 }
