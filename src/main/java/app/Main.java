@@ -20,6 +20,8 @@ public class Main{
         // String endereco, String nomeFantasia, 
         // String cnpj) //
 
-        PessoaJuridica pj = new PessoaJuridica("Alex", )
+        PessoaJuridica pj = new PessoaJuridica("Alex", "Rua pão", "XP corretora de Pantera", "7657464764");
+
+        System.out.println(pj.exibirInformações());
     }
 }

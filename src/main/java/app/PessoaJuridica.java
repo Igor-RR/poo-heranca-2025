@@ -2,28 +2,13 @@ package app;
 
 import java.time.LocalDate;
 
-public class PessoaJuridica {
-    private String nome;
-    private String endereco;
-    private LocalDate dataCriacao;
+import java.time.format.DateTimeFormatter;
+
+public class PessoaJuridica extends Pessoa {
+
     private String nomeFantasia;
     private String cnpj;
 
-    public String getNome(){
-        return nome;
-    }
-
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-
-    public String getEndereco(){
-        return endereco;
-    }
-
-    public void setEndereco(String endereco){
-        this.endereco = endereco;
-    }
 
     public String getNomeFantasia(){
         return nomeFantasia;
@@ -41,9 +26,13 @@ public class PessoaJuridica {
         this.cnpj = cnpj;
     }
 
+    @Override
     public String exibirInformações(){
-        String info = "O nome é: " + nome + ". O endereço é: " + endereco;
-        return info;
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return " ---- Informações ----- \n" +
+                "Nome: " + this.getNome() + "\n" + 
+                "Endereço: " + this.getEndereco() + "\n" +
+                "Data de nascimento: " + this.getDataCriacao().format(formatador) + "\n";
     }
 
     public PessoaJuridica(String nome, String endereco, String nomeFantasia, String cnpj){
